@@ -65,11 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Razorpay Payment')),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: _openCheckout,
-          child: Text('Pay ₹500'),
-        ),
+      body: SafeArea(
+          child: Center(
+            child: ElevatedButton(
+              onPressed: _openCheckout,
+              child: Text('Pay ₹500'),
+            ),
+          )
       ),
     );
   }
